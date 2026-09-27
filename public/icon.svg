@@ -1,0 +1,14 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Open book mark">
+  <rect width="64" height="64" rx="16" fill="#FBF8F2"/>
+  <path d="M32 21 C26.5 16 17 15 11 18 V45 C17 42 26.5 43 32 48 C37.5 43 47 42 53 45 V18 C47 15 37.5 16 32 21 Z"
+        fill="#FFD9E4" stroke="#A02F55" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M32 21 V48" stroke="#A02F55" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M15 23.5 C19 22 24.5 22.5 28 24.8" stroke="#A02F55" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.55"/>
+  <path d="M15 30 C19 28.5 24.5 29 28 31.3" stroke="#A02F55" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.55"/>
+  <path d="M15 36.5 C19 35 24.5 35.5 28 37.8" stroke="#A02F55" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.55"/>
+  <path d="M36 24.8 C39.5 22.5 45 22 49 23.5" stroke="#A02F55" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.55"/>
+  <path d="M36 31.3 C39.5 29 45 28.5 49 30" stroke="#A02F55" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.55"/>
+  <path d="M36 37.8 C39.5 35.5 45 35 49 36.5" stroke="#A02F55" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.55"/>
+  <path d="M40 12.5 C41.5 10 44.5 9 47 10.2 C48 7.6 51 6.6 53.2 8.2 C55.6 10 55.4 13.4 53 15.6 L47.3 20.8 L41.8 15.4 C39.8 13.4 39.2 12.8 40 12.5 Z"
+        fill="#FFF1BF" stroke="#8A6A00" stroke-width="1.6" stroke-linejoin="round"/>
+</svg>

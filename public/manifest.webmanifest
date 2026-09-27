@@ -1,0 +1,18 @@
+{
+  "name": "Bible Study Guide",
+  "short_name": "Bible Guide",
+  "description": "A quick reference for our small group: dates, authorship, snapshots and key passages for all 66 books.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FBF8F2",
+  "theme_color": "#FBF8F2",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
