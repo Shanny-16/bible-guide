@@ -77,6 +77,11 @@ export function AboutPage() {
           Verse text in the pop-up comes from <ExternalLink href="https://bible-api.com">bible-api.com</ExternalLink> (World English
           Bible and King James Version, both public domain). For NIV and other modern versions, use the Bible Gateway link.
         </p>
+        <p className="text-sm text-muted">
+          Pictures on the People and Places pages come from{' '}
+          <ExternalLink href="https://commons.wikimedia.org">Wikimedia Commons</ExternalLink>: public-domain artwork (many by
+          Gustave Doré) and freely licensed photos, credited under each picture.
+        </p>
       </section>
 
       <InstallAppEntry />

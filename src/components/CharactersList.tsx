@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom'
 import type { SectionId } from '../data/books'
 import { CHARACTERS } from '../data/characters'
 import { sectionColors } from '../lib/sectionColors'
-import { BookOpenIcon } from './icons'
+import { personSlugForCharacter } from '../lib/peopleLinks'
+import { ArrowRightIcon, BookOpenIcon } from './icons'
 
 interface CharactersListProps {
   slug: string
@@ -34,7 +36,22 @@ export function CharactersList({ slug, section, onOpen }: CharactersListProps) {
               {i + 1}
             </span>
             <div className="min-w-0 flex-1">
-              <p className="font-heading text-[16px] font-semibold leading-snug text-ink">{c.name}</p>
+              <p className="font-heading text-[16px] font-semibold leading-snug text-ink">
+                {(() => {
+                  const personSlug = personSlugForCharacter(c.name)
+                  return personSlug ? (
+                    <Link
+                      to={`/people/${personSlug}`}
+                      className="inline-flex items-center gap-1 underline decoration-dotted decoration-1 underline-offset-2 hover:text-gospels-deep"
+                    >
+                      {c.name}
+                      <ArrowRightIcon className="h-3 w-3 shrink-0 opacity-60" />
+                    </Link>
+                  ) : (
+                    c.name
+                  )
+                })()}
+              </p>
               <p className="text-[15px] leading-snug text-muted">{c.role}</p>
             </div>
             {c.where && (

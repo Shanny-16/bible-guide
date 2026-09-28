@@ -3,6 +3,10 @@ import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { BooksPage } from './pages/BooksPage'
 import { BookPage } from './pages/BookPage'
+import { PeoplePage } from './pages/PeoplePage'
+import { PersonPage } from './pages/PersonPage'
+import { PlacesPage } from './pages/PlacesPage'
+import { PlacePage } from './pages/PlacePage'
 import { StorylinePage } from './pages/StorylinePage'
 import { AboutPage } from './pages/AboutPage'
 import { NotFoundPage } from './pages/NotFoundPage'
@@ -26,6 +30,10 @@ export default function App() {
         <Route element={<Layout />}>
           <Route index element={<BooksPage />} />
           <Route path="book/:slug" element={<BookPage />} />
+          <Route path="people" element={<PeoplePage />} />
+          <Route path="people/:slug" element={<PersonPage />} />
+          <Route path="places" element={<PlacesPage />} />
+          <Route path="places/:slug" element={<PlacePage />} />
           <Route path="storyline" element={<StorylinePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="*" element={<NotFoundPage />} />

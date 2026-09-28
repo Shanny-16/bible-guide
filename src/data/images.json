@@ -1,0 +1,555 @@
+{
+  "caleb": {
+    "file": "/img/people/caleb.jpg",
+    "title": "Return of the Spies from the Land of Promise, as in Numbers 13, engraving by Gustave Doré",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dore_Return_of_the_Spies_From_the_Land_of_Promise.jpg"
+  },
+  "deborah": {
+    "file": "/img/people/deborah.jpg",
+    "title": "Deborah Praises Jael (Jud. 5:1-3,24-31)",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:053.Deborah_Praises_Jael.jpg"
+  },
+  "gideon": {
+    "file": "/img/people/gideon.jpg",
+    "title": "Gideon Chooses 300 Soldiers (Jud. 7:1-7)",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:054.Gideon_Chooses_300_Soldiers.jpg"
+  },
+  "ruth": {
+    "file": "/img/people/ruth.jpg",
+    "title": "Dore Bible The Gleaners",
+    "author": "",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dore_Bible_The_Gleaners.jpg"
+  },
+  "samson": {
+    "file": "/img/people/samson.jpg",
+    "title": "Print; Prints",
+    "author": "Frederic Leighton",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Samson_Carrying_the_Gates_(Dalziels%27_Bible_Gallery)_MET_DP835635.jpg"
+  },
+  "samuel": {
+    "file": "/img/people/samuel.jpg",
+    "title": "Samuel anoints Saul (1 Samuel 10:1)",
+    "author": "Gustave Doré",
+    "license": "No known copyright restrictions",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Bible_panorama,_or_The_Holy_Scriptures_in_picture_and_story_(1891)_(14781793391).jpg"
+  },
+  "saul": {
+    "file": "/img/people/saul.jpg",
+    "title": "Saul and the Witch of Endor",
+    "author": "Gustave Doré (1832-83)",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Witch_of_Endor._Dore_1866.jpg"
+  },
+  "david": {
+    "file": "/img/people/david.jpg",
+    "title": "David Shows Saul How He Spared His Life (1Sam. 24:2-20)",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:074.David_Shows_Saul_How_He_Spared_His_Life.jpg"
+  },
+  "solomon": {
+    "file": "/img/people/solomon.jpg",
+    "title": "The Judgment of Solomon (1Kings 3:16-28)",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:084.The_Judgment_of_Solomon.jpg"
+  },
+  "elijah": {
+    "file": "/img/people/elijah.jpg",
+    "title": "Elijah Ascends to Heaven in a Chariot of Fire (2Kings 2:1-15)",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:095.Elijah_Ascends_to_Heaven_in_a_Chariot_of_Fire.jpg"
+  },
+  "elisha": {
+    "file": "/img/people/elisha.jpg",
+    "title": "Eliseus (Elisha), prophet of the Hebrew Bible",
+    "author": "Guillaume Rouillé",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Eliseus-Prophet.jpg"
+  },
+  "jonah": {
+    "file": "/img/people/jonah.jpg",
+    "title": "Dore jonah whale",
+    "author": "",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dore_jonah_whale.jpg"
+  },
+  "amos": {
+    "file": "/img/people/amos.jpg",
+    "title": "Amos the Prophet",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Prophet_Amos_(89471482).jpg"
+  },
+  "hosea": {
+    "file": "/img/people/hosea.jpg",
+    "title": "The prophet Hosea (De Profeten series), quoting Hosea 13:14",
+    "author": "Rijksmuseum (anonymous woodcut)",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:De_profeet_Hosea_De_Profeten_(serietitel),_RP-P-BI-6327.jpg"
+  },
+  "isaiah": {
+    "file": "/img/people/isaiah.jpg",
+    "title": "Gravure sur l'Ancien Testament",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_proph%C3%A8te_Isa%C3%AFe,_par_Gustave_Dor%C3%A9.jpg"
+  },
+  "hezekiah": {
+    "file": "/img/people/hezekiah.jpg",
+    "title": "King Hezekiah, clothed in sackcloth, spreads open the letter before the Lord.",
+    "author": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:King_Hezekiah,_clouthed_in_sackcloth,_spreads_open_the_letter_before_the_Lord.jpg"
+  },
+  "josiah": {
+    "file": "/img/people/josiah.jpg",
+    "title": "Josiah hearing the book of the law",
+    "author": "Unknown",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Josiah_hearing_the_book_of_the_law.jpg"
+  },
+  "jeremiah": {
+    "file": "/img/people/jeremiah.jpg",
+    "title": "Prophet Jeremiah",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:123.The_Prophet_Jeremiah_(retusche).jpg"
+  },
+  "ezekiel": {
+    "file": "/img/people/ezekiel.jpg",
+    "title": "Ezekiel’s Vision of the Valley of Dry Bones",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ezekiel%E2%80%99s_Vision_of_the_Valley_of_Dry_Bones.jpg"
+  },
+  "daniel": {
+    "file": "/img/people/daniel.jpg",
+    "title": "Daniel in the Lions' Den (Dan. 6:11-29)",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:131.Daniel_in_the_Lions%27_Den.jpg"
+  },
+  "esther": {
+    "file": "/img/people/esther.jpg",
+    "title": "Esther Before the King (Est. 5:1-8)",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:115.Esther_Before_the_King.jpg"
+  },
+  "ezra": {
+    "file": "/img/people/ezra.jpg",
+    "title": "Ezra Reads the Law to the People (Neh. 8:1-12)",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:109.Ezra_Reads_the_Law_to_the_People.jpg"
+  },
+  "nehemiah": {
+    "file": "/img/people/nehemiah.jpg",
+    "title": "Nehemiah Views the Ruins of Jerusalem's Walls (Neh. 2:1-20)",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:108.Nehemiah_Views_the_Ruins_of_Jerusalem's_Walls.jpg"
+  },
+  "mary": {
+    "file": "/img/people/mary.jpg",
+    "title": "The Annunciation",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gustave_Dore_-_The_Annunciation.jpg"
+  },
+  "john-the-baptist": {
+    "file": "/img/people/john-the-baptist.jpg",
+    "title": "Gustave Doré's John the Baptist Preaching in the Wilderness",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:DoreJohntheBaptistPreachingintheWilderness.jpg"
+  },
+  "jesus": {
+    "file": "/img/people/jesus.jpg",
+    "title": "Sermon on the Mount",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dore_Bible_Sermon_on_the_Mount.jpg"
+  },
+  "peter": {
+    "file": "/img/people/peter.jpg",
+    "title": "Gustave Doré - Jesus walks on the sea",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jesus_walks_on_the_sea.jpg"
+  },
+  "john": {
+    "file": "/img/people/john.jpg",
+    "title": "Gustave Doré's St. John on Patmos",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:St.JohnatPatmosDore.jpg"
+  },
+  "mary-magdalene": {
+    "file": "/img/people/mary-magdalene.jpg",
+    "title": "Noli me tangere",
+    "author": "Fra Angelico",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Fra_Angelico_-_Noli_Me_Tangere_(Cell_1)_-_WGA00535.jpg"
+  },
+  "stephen": {
+    "file": "/img/people/stephen.jpg",
+    "title": "The Death of Stephen by Gustave Doré",
+    "author": "",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Death_of_Stephen_by_Gustave_Dor%C3%A9.jpg"
+  },
+  "paul": {
+    "file": "/img/people/paul.jpg",
+    "title": "Paul in Ephesus (Magicians burn their pagan books after their conversion by the Apostle Paul in Ephesus)/\"Of those who…",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Paul_in_Ephesus_(89485605).jpg"
+  },
+  "barnabas": {
+    "file": "/img/people/barnabas.jpg",
+    "title": "Paul and Barnabas at Lystra MET DP133560",
+    "author": "Jacob Pynas",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Paul_and_Barnabas_at_Lystra_MET_DP133560.jpg"
+  },
+  "timothy": {
+    "file": "/img/people/timothy.jpg",
+    "title": "Saint Timothy (ortodox icon)",
+    "author": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Saint_Timothy.jpg"
+  },
+  "luke": {
+    "file": "/img/people/luke.jpg",
+    "title": "Luke the Evangelist, miniature from the Grandes Heures of Anne of Brittany, Queen consort of France (1477-1514).",
+    "author": "Jean Bourdichon",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Grandes_Heures_Anne_de_Bretagne_Saint_Luc.jpg"
+  },
+  "james": {
+    "file": "/img/people/james.jpg",
+    "title": "Neo-Byzantine icon of James the Just",
+    "author": "",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Saint_James_the_Just.jpg"
+  },
+  "ur": {
+    "file": "/img/places/ur.jpg",
+    "title": "Ancient ziggurat at Ali Air Base Iraq",
+    "author": "en:User:Hardnfast",
+    "license": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ancient_ziggurat_at_Ali_Air_Base_Iraq_2005.jpg"
+  },
+  "haran": {
+    "file": "/img/places/haran.jpg",
+    "title": "One of some scanned slides, taken during a tour through the desert between Harran and Urfa in 1997. Due to irrigation -…",
+    "author": "Dosseman",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Harran_Beehive_houses_200.jpg"
+  },
+  "hebron": {
+    "file": "/img/places/hebron.jpg",
+    "title": "Palestine, Hebron, Cave of the Patriarchs from the south.",
+    "author": "Utilisateur:Djampa - User:Djampa",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hebron_Cave_of_the_Patriarchs.jpg"
+  },
+  "bethel": {
+    "file": "/img/places/bethel.jpg",
+    "title": "Given the fact that it was commissioned by Walters over a year before the publication of the Doré Bible, this drawing i…",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gustave_Dor%C3%A9_-_Study_for_%22Jacob%27s_Dream%22_-_Walters_371319.jpg"
+  },
+  "egypt": {
+    "file": "/img/places/egypt.jpg",
+    "title": "All Giza Pyramids in one shot.",
+    "author": "Ricardo Liberato",
+    "license": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids.jpg"
+  },
+  "mount-sinai": {
+    "file": "/img/places/mount-sinai.jpg",
+    "title": "Edward Thomas Daniell - Summit of Mount Sinai or Jebel Musa - B1977.14.4637 - Yale Center for British Art",
+    "author": "Edward Thomas Daniell",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Edward_Thomas_Daniell_-_Summit_of_Mount_Sinai_or_Jebel_Musa_-_B1977.14.4637_-_Yale_Center_for_British_Art.jpg"
+  },
+  "jordan-river": {
+    "file": "/img/places/jordan-river.jpg",
+    "title": "Epiphany service at the Jordan River baptism site, Qasr el Yahud",
+    "author": "Ratoncito Perez",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Epiphany_Qasr_el_Yahud.jpg"
+  },
+  "jericho": {
+    "file": "/img/places/jericho.jpg",
+    "title": "Tell es-Sultan, Jericho, Palestine",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tell_es-Sultan,_Jericho,_Palestine2.jpg"
+  },
+  "shiloh": {
+    "file": "/img/places/shiloh.jpg",
+    "title": "Tel Shiloh in the foreground with the round Shiloh visitor center visible on top of the tel.",
+    "author": "Deg777",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tel_Shiloh_(biblical_site)_2017.jpg"
+  },
+  "bethlehem": {
+    "file": "/img/places/bethlehem.jpg",
+    "title": "Church of the Nativity, Bethlehem (exterior, bell tower)",
+    "author": "Britchi Mirela",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Palestine_Bethlehem,_Church_of_the_Nativity_or_Birthplace_of_Jesus_(exterior).jpg"
+  },
+  "jerusalem": {
+    "file": "/img/places/jerusalem.jpg",
+    "title": "View of the Dome of the Rock and Old City of Jerusalem from the Mount of Olives",
+    "author": "Godot13",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jerusalem-2013(2)-View_of_the_Dome_of_the_Rock_%26_Temple_Mount_02.jpg"
+  },
+  "the-temple": {
+    "file": "/img/places/the-temple.jpg",
+    "title": "Western Wall and Dome of the Rock, Jerusalem",
+    "author": "Gary Bembridge",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Western_Wall_and_Dome_of_the_Rock_Jerusalem_-10_(33400391921).jpg"
+  },
+  "mount-carmel": {
+    "file": "/img/places/mount-carmel.jpg",
+    "title": "Taken from the rooftop lookout of the Muhraqa Carmelite monastery. At the left (western) edge can be seen the coastal c…",
+    "author": "Ian Scott",
+    "license": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Panorama_of_Western_Galilee_from_atop_Mount_Carmel_(20830397795).jpg"
+  },
+  "samaria": {
+    "file": "/img/places/samaria.jpg",
+    "title": "Drone aerial view of the ancient acropolis of Samaria-Sebaste, capturing the ruins of the Roman Forum and Basilica buil…",
+    "author": "Ywpark2003 Prof. Yong Woo Park",
+    "license": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Drone_Aerial_View_of_the_Acropolis_and_Palace_Site_of_King_Omri_in_Samaria_Sebastia.jpg"
+  },
+  "nineveh": {
+    "file": "/img/places/nineveh.jpg",
+    "title": "Nineveh. The Mashki Gate. Reconstructed. One of the fifteen gateways of ancient Nineveh. The lower portions of the ston…",
+    "author": "Photo by Fredarch.",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Nineveh_mashki_gate_from_west.JPG"
+  },
+  "babylon": {
+    "file": "/img/places/babylon.jpg",
+    "title": "Pergamon museum Ishtar Gate in Berlin",
+    "author": "Sinoulpgc",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pergamon_museum_Ishtar_Gate.jpg"
+  },
+  "susa": {
+    "file": "/img/places/susa.jpg",
+    "title": "The Apadana, hypostyle hall of the Palace of Darius, Susa, Iran",
+    "author": "Carole Raddato",
+    "license": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Apadana,_a_large_hypostyle_room_of_36_columns_in_the_Palace_of_Darius,_Susa,_capital_of_Elam_and_of_the_Achaemenid_Empire,_Iran_(46950284624).jpg"
+  },
+  "nazareth": {
+    "file": "/img/places/nazareth.jpg",
+    "title": "Church of the Annunciation, Nazareth (exterior dome)",
+    "author": "young shanahan (Amman, Jordan)",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Church_of_the_Annunciation._(17899736328).jpg"
+  },
+  "sea-of-galilee": {
+    "file": "/img/places/sea-of-galilee.jpg",
+    "title": "View of the Sea of Galilee from Mount Arbel",
+    "author": "Zeromancer44",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:View_on_Sea_of_Galilee_from_Mount_Arbel.JPG"
+  },
+  "capernaum": {
+    "file": "/img/places/capernaum.jpg",
+    "title": "blogged at blog.expedia.com.au/archive/2008/07/01/225.aspx Capernaum",
+    "author": "James Emery from Douglasville, United States",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Capernaum_synagogue_ruins_0947_(507864661).jpg"
+  },
+  "samaria-sychar": {
+    "file": "/img/places/samaria-sychar.jpg",
+    "title": "Nablus_jacob_well",
+    "author": "Elmendorf, Dwight Lathrop",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Nablus_jacob_well_1912.jpg"
+  },
+  "mount-of-olives": {
+    "file": "/img/places/mount-of-olives.jpg",
+    "title": "Olive trees in the traditional garden of Gethsemane, Jerusalem",
+    "author": "Ian Scott",
+    "license": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Olive_trees_in_the_traditional_garden_of_Gethsemane_(6409527407).jpg"
+  },
+  "golgotha": {
+    "file": "/img/places/golgotha.jpg",
+    "title": "Entrance courtyard and facade of the Church of the Holy Sepulchre, Jerusalem",
+    "author": "Ricardo Tulio Gandelman",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Entrance_courtyard_at_the_Church_of_the_Holy_Sepulchre.jpg"
+  },
+  "damascus": {
+    "file": "/img/places/damascus.jpg",
+    "title": "[The street called straight, Damascus, Holy Land, (i.e. Syria)] Title from the Detroit Publishing Co., catalogue J—fore…",
+    "author": "Detroit Photographic Company",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Street-called-Straight-Detroit.jpeg"
+  },
+  "antioch": {
+    "file": "/img/places/antioch.jpg",
+    "title": "Altar of St Peter's Cave Church near Antakya (Antioch)",
+    "author": "Memorino",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:St_Peters_Cave_Church_altar.jpg"
+  },
+  "philippi": {
+    "file": "/img/places/philippi.jpg",
+    "title": "Philippi, Forum, fragments",
+    "author": "Berthold Werner",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Archaeological_site_of_Philippi_BW_2017-10-05_12-46-14.jpg"
+  },
+  "athens": {
+    "file": "/img/places/athens.jpg",
+    "title": "Acropolis of Athens panorama (panoramic view from Areopagus hill), Athens, Greece.",
+    "author": "Ggia",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:20101024_Acropolis_panoramic_view_from_Areopagus_hill_Athens_Greece.jpg"
+  },
+  "corinth": {
+    "file": "/img/places/corinth.jpg",
+    "title": "Ο Ναός του Απόλλωνα στην Κόρινθο",
+    "author": "Berthold Werner",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Korinth_BW_2017-10-10_10-55-28.jpg"
+  },
+  "ephesus": {
+    "file": "/img/places/ephesus.jpg",
+    "title": "Façade of the Celsus library, in Ephesus, near Selçuk, west Turkey.",
+    "author": "Benh LIEU SONG",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ephesus_Celsus_Library_Fa%C3%A7ade.jpg"
+  },
+  "rome": {
+    "file": "/img/places/rome.jpg",
+    "title": "View of the Roman Forum from the Capitoline Museums in Rome.",
+    "author": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but pleas…",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Foro_Romano_Musei_Capitolini_Roma.jpg"
+  },
+  "patmos": {
+    "file": "/img/places/patmos.jpg",
+    "title": "Panorama of Skala, Patmos, with Chora and the Monastery of Saint John above",
+    "author": "Tomisti",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Patmos_panorama_3.jpg"
+  },
+  "adam-and-eve": {
+    "file": "/img/people/adam-and-eve.png",
+    "title": "Adam and Eve Driven out of Eden",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Adam_and_Eve_Driven_out_of_Eden.png"
+  },
+  "noah": {
+    "file": "/img/people/noah.jpg",
+    "title": "The Return of the Dove to the Ark",
+    "author": "John Everett Millais",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Millais_-_Die_R%C3%BCckkehr_der_Taube_zur_Arche_Noah.jpg"
+  },
+  "abraham": {
+    "file": "/img/people/abraham.jpg",
+    "title": "Abraham and the Three Angels (Gen. 18:1-16)",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:012.Abraham_and_the_Three_Angels.jpg"
+  },
+  "sarah": {
+    "file": "/img/people/sarah.jpg",
+    "title": "Abram's Counsel to Sarai",
+    "author": "James Jacques Joseph Tissot",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:James_Jacques_Joseph_Tissot_-_Abram's_Counsel_to_Sarai_-_Google_Art_Project.jpg"
+  },
+  "isaac": {
+    "file": "/img/people/isaac.jpg",
+    "title": "The Testing of Abraham's Faith (Gen. 22:2-19)",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:016.The_Testing_of_Abraham%27s_Faith.jpg"
+  },
+  "rebekah": {
+    "file": "/img/people/rebekah.png",
+    "title": "Eliezer and Rebekah",
+    "author": "",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Eliezer_and_Rebekah.png"
+  },
+  "jacob": {
+    "file": "/img/people/jacob.jpg",
+    "title": "Jacob Wrestling with the Angel.",
+    "author": "Gustave Doré (1832-1883)",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jacob_Wrestling_with_the_Angel.jpg"
+  },
+  "joseph": {
+    "file": "/img/people/joseph.jpg",
+    "title": "Dore Bible Joseph Makes Himself Known to His Brethren",
+    "author": "",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dore_Bible_Joseph_Makes_Himself_Known_to_His_Brethren.jpg"
+  },
+  "job": {
+    "file": "/img/people/job.jpg",
+    "title": "Job Speaks with His Friends (Job 2:1-13)",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:119.Job_Speaks_with_His_Friends.jpg"
+  },
+  "moses": {
+    "file": "/img/people/moses.jpg",
+    "title": "Moses Smashing the Tables of the Law",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Moses_dore.jpg"
+  },
+  "aaron": {
+    "file": "/img/people/aaron.jpg",
+    "title": "Moses and Aaron Appear before Pharaoh (Ex. 6:26-30, 7:1-10)",
+    "author": "Gustave Doré",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:032.Moses_and_Aaron_Appear_before_Pharaoh.jpg"
+  },
+  "miriam": {
+    "file": "/img/people/miriam.jpg",
+    "title": "Miriam and Aaron complain against Moses, engraving from \"The Bible and Its Story Taught by One Thousand Picture Lessons…",
+    "author": "illustrators of \"The Bible and Its Story Taught by One Thousand Picture Lessons…",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Miriam_and_Aaron_complain_against_Moses.jpg"
+  },
+  "joshua": {
+    "file": "/img/people/joshua.jpg",
+    "title": "Dore joshua sun",
+    "author": "",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dore_joshua_sun.jpg"
+  }
+}

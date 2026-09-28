@@ -8,6 +8,7 @@ import { TestamentToggle } from '../components/TestamentToggle'
 import type { TestamentFilter } from '../components/TestamentToggle'
 import { SectionGroup } from '../components/SectionGroup'
 import { InstallBanner } from '../components/InstallBanner'
+import { QuickLinksRow } from '../components/QuickLinksRow'
 
 export function BooksPage() {
   const [query, setQuery] = useState('')
@@ -31,11 +32,14 @@ export function BooksPage() {
   return (
     <div className="flex flex-col gap-5">
       <ProgressBar readCount={readBooks.length} total={BOOKS.length} />
+      {readBooks.length > 0 && <QuickLinksRow />}
 
       <div className="sticky top-0 z-10 -mx-4 flex flex-col gap-3 bg-cream/95 px-4 pb-3 pt-2 sm:-mx-6 sm:px-6">
         <SearchBar value={query} onChange={setQuery} />
         <TestamentToggle value={testament} onChange={setTestament} />
       </div>
+
+      {readBooks.length === 0 && <QuickLinksRow />}
 
       {sectionsWithBooks.length === 0 ? (
         <div className="flex flex-col items-center gap-3 rounded-card border border-ink/10 bg-white px-6 py-12 text-center">

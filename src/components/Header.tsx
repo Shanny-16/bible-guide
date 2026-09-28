@@ -3,6 +3,8 @@ import { BookOpenIcon } from './icons'
 
 const NAV_ITEMS = [
   { to: '/', label: 'Books', end: true },
+  { to: '/people', label: 'People', end: false },
+  { to: '/places', label: 'Places', end: false },
   { to: '/storyline', label: 'Storyline', end: false },
   { to: '/about', label: 'About', end: false },
 ] as const
@@ -19,14 +21,14 @@ export function Header() {
           </div>
         </div>
 
-        <nav aria-label="Main" className="-mx-1 flex gap-1 pt-1">
+        <nav aria-label="Main" className="-mx-2 flex flex-nowrap gap-0.5 overflow-x-auto pt-1 scrollbar-none sm:-mx-1 sm:gap-1">
           {NAV_ITEMS.map((item) => (
             <NavLink
               key={item.to}
               to={item.to}
               end={item.end}
               className={({ isActive }) =>
-                `flex min-h-[40px] items-center rounded-full px-3.5 text-sm font-semibold transition-colors ${
+                `flex min-h-[44px] shrink-0 items-center rounded-full px-2.5 text-sm font-semibold sm:px-3.5 transition-colors ${
                   isActive ? 'bg-gospels-soft text-gospels-deep' : 'text-muted hover:bg-ink/5 hover:text-ink'
                 }`
               }
