@@ -7,6 +7,7 @@ import { SearchBar } from '../components/SearchBar'
 import { TestamentToggle } from '../components/TestamentToggle'
 import type { TestamentFilter } from '../components/TestamentToggle'
 import { SectionGroup } from '../components/SectionGroup'
+import { InstallBanner } from '../components/InstallBanner'
 
 export function BooksPage() {
   const [query, setQuery] = useState('')
@@ -55,6 +56,8 @@ export function BooksPage() {
           ))}
         </div>
       )}
+
+      <InstallBanner />
     </div>
   )
 }

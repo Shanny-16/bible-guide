@@ -11,6 +11,7 @@ import { DEFAULT_TEXT_TRANSLATION } from './bibleText'
 const READ_KEY = 'bg.read'
 const VERSION_KEY = 'bg.version'
 const TEXT_VERSION_KEY = 'bg.textVersion'
+const INSTALL_DISMISSED_KEY = 'bg.installDismissed'
 const NOTE_PREFIX = 'bg.notes.'
 const noteKey = (slug: string) => `${NOTE_PREFIX}${slug}`
 
@@ -165,6 +166,38 @@ export function useTextTranslation() {
   }, [])
 
   return { translation, setTranslation }
+}
+
+/** Whether the person has dismissed the "Add to Home Screen" banner on this device before. */
+export function isInstallDismissed(): boolean {
+  return safeGet(INSTALL_DISMISSED_KEY) === '1'
+}
+
+function setInstallDismissed(): void {
+  safeSet(INSTALL_DISMISSED_KEY, '1')
+  notifyChange()
+}
+
+/** Install-banner dismissal hook: current state plus a `dismiss` action. */
+export function useInstallDismissed() {
+  const [dismissed, setDismissed] = useState<boolean>(() => isInstallDismissed())
+
+  useEffect(() => {
+    const sync = () => setDismissed(isInstallDismissed())
+    window.addEventListener(CHANGE_EVENT, sync)
+    window.addEventListener('storage', sync)
+    return () => {
+      window.removeEventListener(CHANGE_EVENT, sync)
+      window.removeEventListener('storage', sync)
+    }
+  }, [])
+
+  const dismiss = useCallback(() => {
+    setDismissed(true)
+    setInstallDismissed()
+  }, [])
+
+  return { dismissed, dismiss }
 }
 
 /** Clears read-progress and every saved note. Used by the About page's reset button. */

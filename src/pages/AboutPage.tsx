@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { resetAllProgress, useVersion } from '../lib/storage'
 import { ExternalLink } from '../components/ExternalLink'
 import { VersionPicker } from '../components/VersionPicker'
+import { InstallAppEntry } from '../components/InstallBanner'
 
 export function AboutPage() {
   const { version, setVersion } = useVersion()
@@ -77,6 +78,8 @@ export function AboutPage() {
           Bible and King James Version, both public domain). For NIV and other modern versions, use the Bible Gateway link.
         </p>
       </section>
+
+      <InstallAppEntry />
 
       <section className="flex flex-col gap-2 rounded-card border border-history-deep/25 bg-history-soft/40 p-4">
         <h2 className="font-heading text-lg font-semibold text-history-deep">Reset my progress and notes</h2>

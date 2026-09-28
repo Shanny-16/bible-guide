@@ -64,6 +64,47 @@ export function GlobeIcon({ className }: IconProps) {
   )
 }
 
+export function ShareIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" className={className} fill="none" aria-hidden="true">
+      <path d="M10 3V13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M6.5 6.5L10 3L13.5 6.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M5 9V15.5C5 16.05 5.45 16.5 6 16.5H14C14.55 16.5 15 16.05 15 15.5V9"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+export function AddToHomeIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" className={className} fill="none" aria-hidden="true">
+      <rect x="3" y="3" width="14" height="14" rx="3.5" stroke="currentColor" strokeWidth="1.6" />
+      <path d="M10 7V13M7 10H13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+export function InstallIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" className={className} fill="none" aria-hidden="true">
+      <path d="M10 3V12.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M6.5 9L10 12.5L13.5 9" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M4 14V15.5C4 16.33 4.67 17 5.5 17H14.5C15.33 17 16 16.33 16 15.5V14"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
 export function BookOpenIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 20 20" className={className} fill="none" aria-hidden="true">
