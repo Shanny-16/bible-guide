@@ -4,7 +4,7 @@ import { BookOpenIcon } from '../components/icons'
 
 export function NotFoundPage() {
   useEffect(() => {
-    document.title = 'Page not found · Bible Study Guide'
+    document.title = 'Page not found · Bible Notes'
   }, [])
 
   return (

@@ -1,4 +1,4 @@
-# Bible Study Guide
+# Bible Notes
 
 A small, phone-friendly reference site for a church small group. It is the online version of
 Sharon's printed "Pastel Bible Guide": all 66 books with date, authorship, a study snapshot and

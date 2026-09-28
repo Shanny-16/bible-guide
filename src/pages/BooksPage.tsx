@@ -15,7 +15,7 @@ export function BooksPage() {
   const { readBooks, isRead } = useReadBooks()
 
   useEffect(() => {
-    document.title = 'Bible Study Guide'
+    document.title = 'Bible Notes'
   }, [])
 
   const visibleBooks = useMemo(() => {

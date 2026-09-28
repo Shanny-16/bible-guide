@@ -14,7 +14,7 @@ export function Header() {
         <div className="flex items-center gap-2.5">
           <BookOpenIcon className="h-7 w-7 shrink-0 text-gospels-deep" />
           <div>
-            <h1 className="font-heading text-xl font-semibold leading-tight text-ink sm:text-2xl">Bible Study Guide</h1>
+            <h1 className="font-heading text-xl font-semibold leading-tight text-ink sm:text-2xl">Bible Notes</h1>
             <p className="text-sm text-muted">A quick reference for our small group</p>
           </div>
         </div>

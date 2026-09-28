@@ -44,7 +44,7 @@ export function InstallBanner() {
       <img src="/pwa-192x192.png" alt="" width={44} height={44} className="h-11 w-11 shrink-0 rounded-xl" />
 
       <div className="flex-1">
-        <p className="font-heading text-base font-semibold text-ink">Add Bible Guide to your phone</p>
+        <p className="font-heading text-base font-semibold text-ink">Add Bible Notes to your phone</p>
         {canPrompt ? (
           <p className="text-sm text-muted">Opens like an app, works offline for passages you've read.</p>
         ) : (
@@ -102,7 +102,7 @@ export function InstallAppEntry() {
   return (
     <section className="flex flex-col gap-2">
       <h2 className="font-heading text-xl font-semibold text-ink">Install the app</h2>
-      <p className="text-sm text-muted">Add Bible Guide to your phone's home screen for quick, offline-friendly access.</p>
+      <p className="text-sm text-muted">Add Bible Notes to your phone's home screen for quick, offline-friendly access.</p>
       <button
         type="button"
         onClick={handleClick}

@@ -45,7 +45,7 @@ export function BookPage() {
   }, [draft, note, setNote])
 
   useEffect(() => {
-    document.title = book ? `${book.name} · Bible Study Guide` : 'Not found · Bible Study Guide'
+    document.title = book ? `${book.name} · Bible Notes` : 'Not found · Bible Notes'
   }, [book])
 
   if (!book) {

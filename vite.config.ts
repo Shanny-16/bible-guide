@@ -11,8 +11,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'favicon.ico', 'icon.svg', 'apple-touch-icon-180x180.png'],
       manifest: {
-        name: 'Bible Study Guide',
-        short_name: 'Bible Guide',
+        name: 'Bible Notes',
+        short_name: 'Bible Notes',
         description:
           "A quick Bible reference for our small group: all 66 books, context, characters, key passages.",
         start_url: '/',

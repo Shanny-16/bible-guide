@@ -8,7 +8,7 @@ export function AboutPage() {
   const { version, setVersion } = useVersion()
 
   useEffect(() => {
-    document.title = 'About · Bible Study Guide'
+    document.title = 'About · Bible Notes'
   }, [])
 
   function handleReset() {

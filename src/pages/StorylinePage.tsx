@@ -22,7 +22,7 @@ export function StorylinePage() {
   const [openRef, setOpenRef] = useState<string | null>(null)
 
   useEffect(() => {
-    document.title = 'Storyline & timeline · Bible Study Guide'
+    document.title = 'Storyline & timeline · Bible Notes'
   }, [])
 
   return (
