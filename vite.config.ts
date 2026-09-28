@@ -14,7 +14,7 @@ export default defineConfig({
         name: 'Bible Notes',
         short_name: 'Bible Notes',
         description:
-          "A quick Bible reference for our small group: all 66 books, context, characters, key passages.",
+          "A simple guide to help you read God's Word: all 66 books with context, characters and key passages.",
         start_url: '/',
         scope: '/',
         display: 'standalone',

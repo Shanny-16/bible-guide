@@ -15,7 +15,7 @@ export function Header() {
           <BookOpenIcon className="h-7 w-7 shrink-0 text-gospels-deep" />
           <div>
             <h1 className="font-heading text-xl font-semibold leading-tight text-ink sm:text-2xl">Bible Notes</h1>
-            <p className="text-sm text-muted">A quick reference for our small group</p>
+            <p className="text-sm text-muted">A simple guide to help you read God&apos;s Word</p>
           </div>
         </div>
 
