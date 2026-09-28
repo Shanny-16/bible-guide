@@ -110,8 +110,6 @@ export function BookPage() {
 
       <InsightCard slug={book.slug} section={book.section} />
 
-      <CharactersList slug={book.slug} section={book.section} onOpen={setOpenRef} />
-
       <div className="flex flex-col gap-2">
         <h2 className="font-heading text-lg font-semibold text-ink">Key passages</h2>
         <div className="flex flex-wrap gap-2">
@@ -121,6 +119,9 @@ export function BookPage() {
         </div>
         <p className="text-xs text-muted">Tap a passage to read it here. Long passages may take a moment.</p>
       </div>
+
+      <CharactersList slug={book.slug} section={book.section} onOpen={setOpenRef} />
+
 
       <div className="flex flex-col gap-2">
         <label htmlFor="my-notes" className="font-heading text-lg font-semibold text-ink">

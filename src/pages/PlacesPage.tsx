@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { PLACES, PLACE_ERAS } from '../data/places'
+import { BibleMap } from '../components/BibleMap'
 import { EraJumpBar } from '../components/EraJumpBar'
 import { IndexCard } from '../components/IndexCard'
 
@@ -17,6 +18,11 @@ export function PlacesPage() {
       <div>
         <h1 className="font-heading text-2xl font-semibold text-ink sm:text-3xl">Places of the Bible</h1>
         <p className="mt-1 text-[15px] text-muted">Where the story happened, in the order it happened.</p>
+      </div>
+
+      <div>
+        <BibleMap interactive />
+        <p className="mt-1.5 text-center text-xs text-muted">Tap a dot to open that place.</p>
       </div>
 
       <EraJumpBar eras={PLACE_ERAS} />

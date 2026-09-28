@@ -21,7 +21,7 @@ export function Header() {
           </div>
         </div>
 
-        <nav aria-label="Main" className="-mx-2 flex flex-nowrap gap-0.5 overflow-x-auto pt-1 scrollbar-none sm:-mx-1 sm:gap-1">
+        <nav aria-label="Main" className="-mx-2 hidden flex-nowrap gap-0.5 overflow-x-auto pt-1 scrollbar-none sm:-mx-1 sm:flex sm:gap-1">
           {NAV_ITEMS.map((item) => (
             <NavLink
               key={item.to}

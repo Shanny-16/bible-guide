@@ -118,3 +118,42 @@ export function BookOpenIcon({ className }: IconProps) {
     </svg>
   )
 }
+
+export function PeopleIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" className={className} fill="none" aria-hidden="true">
+      <circle cx="7" cy="6.5" r="2.5" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M2.5 16C2.9 13 4.7 11.3 7 11.3C9.3 11.3 11.1 13 11.5 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="13.8" cy="7.2" r="2" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M11.8 16C12.1 13.5 13.6 12.1 15.4 12.1C17.2 12.1 18.5 13.4 18.9 15.6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
+export function StorylineIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" className={className} fill="none" aria-hidden="true">
+      <path
+        d="M2.5 5.5C5 5.5 5 9.5 7.5 9.5C10 9.5 10 5.5 12.5 5.5C15 5.5 15 14.5 17.5 14.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="2.5" cy="5.5" r="1.3" fill="currentColor" />
+      <circle cx="7.5" cy="9.5" r="1.3" fill="currentColor" />
+      <circle cx="12.5" cy="5.5" r="1.3" fill="currentColor" />
+      <circle cx="17.5" cy="14.5" r="1.3" fill="currentColor" />
+    </svg>
+  )
+}
+
+export function InfoCircleIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" className={className} fill="none" aria-hidden="true">
+      <circle cx="10" cy="10" r="6.5" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="10" cy="6.9" r="0.9" fill="currentColor" />
+      <path d="M10 9.3V13.6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  )
+}

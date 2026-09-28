@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { PLACES, PLACE_ERAS, placeBySlug } from '../data/places'
 import { useVersion } from '../lib/storage'
+import { BibleMap } from '../components/BibleMap'
 import { BookChip } from '../components/BookChip'
-import { ExternalLink } from '../components/ExternalLink'
 import { Figure } from '../components/Figure'
 import { PassageChip } from '../components/PassageChip'
 import { PassageSheet } from '../components/PassageSheet'
@@ -29,7 +29,6 @@ export function PlacePage() {
   const index = PLACES.findIndex((p) => p.slug === place.slug)
   const prevPlace = index > 0 ? PLACES[index - 1] : undefined
   const nextPlace = index >= 0 && index < PLACES.length - 1 ? PLACES[index + 1] : undefined
-  const mapUrl = place.coords ? `https://www.openstreetmap.org/?mlat=${place.coords[0]}&mlon=${place.coords[1]}#map=12/${place.coords[0]}/${place.coords[1]}` : undefined
 
   return (
     <div className="flex flex-col gap-6">
@@ -55,15 +54,10 @@ export function PlacePage() {
         <p className="text-[17px] leading-relaxed text-ink">{place.summary}</p>
       </div>
 
-      {mapUrl && (
-        <ExternalLink
-          href={mapUrl}
-          underline={false}
-          className="inline-flex min-h-[44px] w-fit items-center rounded-full bg-major-soft px-4 text-sm font-semibold text-major-deep"
-        >
-          See on map
-        </ExternalLink>
-      )}
+      <div className="flex flex-col gap-2">
+        <h2 className="font-heading text-lg font-semibold text-ink">Where it is</h2>
+        <BibleMap highlight={place.slug} />
+      </div>
 
       <div className="flex flex-col gap-2">
         <h2 className="font-heading text-lg font-semibold text-ink">Read about it</h2>
