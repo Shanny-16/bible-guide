@@ -5,7 +5,9 @@ import { bibleProjectVideos, enduringWordUrl, readBookUrl } from '../data/links'
 import { useNote, useReadBooks, useVersion } from '../lib/storage'
 import { sectionColors } from '../lib/sectionColors'
 import { ExternalLink } from '../components/ExternalLink'
+import { InsightCard } from '../components/InsightCard'
 import { PassageChip } from '../components/PassageChip'
+import { PassageSheet } from '../components/PassageSheet'
 import { VersionPicker } from '../components/VersionPicker'
 import { ArrowLeftIcon, ArrowRightIcon, CheckIcon } from '../components/icons'
 import { NotFoundPage } from './NotFoundPage'
@@ -27,6 +29,7 @@ export function BookPage() {
   const { version, setVersion } = useVersion()
   const { note, setNote } = useNote(slug)
   const [draft, setDraft] = useState(note)
+  const [openRef, setOpenRef] = useState<string | null>(null)
 
   useEffect(() => {
     setDraft(note)
@@ -101,14 +104,16 @@ export function BookPage() {
         <InfoCard label="What is it about?" value={book.snapshot} accentClass={colors.borderSolid} />
       </div>
 
+      <InsightCard slug={book.slug} section={book.section} />
+
       <div className="flex flex-col gap-2">
         <h2 className="font-heading text-lg font-semibold text-ink">Key passages</h2>
         <div className="flex flex-wrap gap-2">
           {book.keyPassages.map((p) => (
-            <PassageChip key={p.ref} label={p.label} reference={p.ref} version={version} />
+            <PassageChip key={p.ref} label={p.label} reference={p.ref} onOpen={setOpenRef} />
           ))}
         </div>
-        <p className="text-xs text-muted">Tap a passage to read it (opens Bible Gateway).</p>
+        <p className="text-xs text-muted">Tap a passage to read it here. Long passages may take a moment.</p>
       </div>
 
       <div className="flex flex-col gap-2">
@@ -169,6 +174,8 @@ export function BookPage() {
           <span className="flex-1 rounded-card border border-ink/5 bg-cream px-4 py-2 text-sm text-muted/60" aria-hidden="true" />
         )}
       </div>
+
+      <PassageSheet reference={openRef} onClose={() => setOpenRef(null)} version={version} />
     </div>
   )
 }

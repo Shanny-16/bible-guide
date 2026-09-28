@@ -5,9 +5,12 @@
 import { useCallback, useEffect, useState } from 'react'
 import type { VersionCode } from '../data/links'
 import { DEFAULT_VERSION } from '../data/links'
+import type { TextTranslation } from './bibleText'
+import { DEFAULT_TEXT_TRANSLATION } from './bibleText'
 
 const READ_KEY = 'bg.read'
 const VERSION_KEY = 'bg.version'
+const TEXT_VERSION_KEY = 'bg.textVersion'
 const NOTE_PREFIX = 'bg.notes.'
 const noteKey = (slug: string) => `${NOTE_PREFIX}${slug}`
 
@@ -137,6 +140,31 @@ export function useVersion() {
   }, [])
 
   return { version, setVersion }
+}
+
+/** Preferred verse-bubble translation (WEB/KJV), shared between every PassageSheet instance. */
+export function useTextTranslation() {
+  const [translation, setTranslationState] = useState<TextTranslation>(
+    () => (safeGet(TEXT_VERSION_KEY) as TextTranslation) || DEFAULT_TEXT_TRANSLATION,
+  )
+
+  useEffect(() => {
+    const sync = () => setTranslationState((safeGet(TEXT_VERSION_KEY) as TextTranslation) || DEFAULT_TEXT_TRANSLATION)
+    window.addEventListener(CHANGE_EVENT, sync)
+    window.addEventListener('storage', sync)
+    return () => {
+      window.removeEventListener(CHANGE_EVENT, sync)
+      window.removeEventListener('storage', sync)
+    }
+  }, [])
+
+  const setTranslation = useCallback((value: TextTranslation) => {
+    setTranslationState(value)
+    safeSet(TEXT_VERSION_KEY, value)
+    notifyChange()
+  }, [])
+
+  return { translation, setTranslation }
 }
 
 /** Clears read-progress and every saved note. Used by the About page's reset button. */

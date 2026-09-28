@@ -72,6 +72,10 @@ export function AboutPage() {
             <ExternalLink href="https://enduringword.com">Enduring Word</ExternalLink> — chapter-by-chapter commentary by David Guzik.
           </li>
         </ul>
+        <p className="text-sm text-muted">
+          Verse text in the pop-up comes from <ExternalLink href="https://bible-api.com">bible-api.com</ExternalLink> (World English
+          Bible and King James Version, both public domain). For NIV and other modern versions, use the Bible Gateway link.
+        </p>
       </section>
 
       <section className="flex flex-col gap-2 rounded-card border border-history-deep/25 bg-history-soft/40 p-4">

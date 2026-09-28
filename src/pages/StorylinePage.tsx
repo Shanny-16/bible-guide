@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import {
   COVENANTS,
   KEY_STORYLINE_SENTENCE,
@@ -8,8 +8,9 @@ import {
   STORYLINE,
   TIMELINE_ANCHORS,
 } from '../data/guide'
-import { DEFAULT_VERSION } from '../data/links'
+import { useVersion } from '../lib/storage'
 import { PassageChip } from '../components/PassageChip'
+import { PassageSheet } from '../components/PassageSheet'
 import { BookChip } from '../components/BookChip'
 
 function isBc(when: string): boolean {
@@ -17,6 +18,9 @@ function isBc(when: string): boolean {
 }
 
 export function StorylinePage() {
+  const { version } = useVersion()
+  const [openRef, setOpenRef] = useState<string | null>(null)
+
   useEffect(() => {
     document.title = 'Storyline & timeline · Bible Study Guide'
   }, [])
@@ -83,7 +87,7 @@ export function StorylinePage() {
               <p className="mt-1 text-sm text-ink">{c.summary}</p>
               <div className="mt-2.5 flex flex-wrap gap-1.5">
                 {c.refs.map((ref) => (
-                  <PassageChip key={ref} label={ref} reference={ref} version={DEFAULT_VERSION} />
+                  <PassageChip key={ref} label={ref} reference={ref} onOpen={setOpenRef} />
                 ))}
               </div>
             </div>
@@ -119,6 +123,8 @@ export function StorylinePage() {
           ))}
         </ul>
       </section>
+
+      <PassageSheet reference={openRef} onClose={() => setOpenRef(null)} version={version} />
     </div>
   )
 }
