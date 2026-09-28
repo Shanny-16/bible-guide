@@ -4,6 +4,7 @@ import { BOOKS, bookBySlug, sectionById } from '../data/books'
 import { bibleProjectVideos, enduringWordUrl, readBookUrl } from '../data/links'
 import { useNote, useReadBooks, useVersion } from '../lib/storage'
 import { sectionColors } from '../lib/sectionColors'
+import { CharactersList } from '../components/CharactersList'
 import { ExternalLink } from '../components/ExternalLink'
 import { InsightCard } from '../components/InsightCard'
 import { PassageChip } from '../components/PassageChip'
@@ -105,6 +106,8 @@ export function BookPage() {
       </div>
 
       <InsightCard slug={book.slug} section={book.section} />
+
+      <CharactersList slug={book.slug} section={book.section} onOpen={setOpenRef} />
 
       <div className="flex flex-col gap-2">
         <h2 className="font-heading text-lg font-semibold text-ink">Key passages</h2>
