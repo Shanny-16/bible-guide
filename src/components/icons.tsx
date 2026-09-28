@@ -54,6 +54,16 @@ export function CloseIcon({ className }: IconProps) {
   )
 }
 
+export function GlobeIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" className={className} fill="none" aria-hidden="true">
+      <circle cx="10" cy="10" r="6.5" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M3.5 10H16.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M10 3.5C12 5.5 12 14.5 10 16.5C8 14.5 8 5.5 10 3.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
 export function BookOpenIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 20 20" className={className} fill="none" aria-hidden="true">

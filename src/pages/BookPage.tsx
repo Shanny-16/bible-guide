@@ -5,6 +5,7 @@ import { bibleProjectVideos, enduringWordUrl, readBookUrl } from '../data/links'
 import { useNote, useReadBooks, useVersion } from '../lib/storage'
 import { sectionColors } from '../lib/sectionColors'
 import { CharactersList } from '../components/CharactersList'
+import { ContextCard } from '../components/ContextCard'
 import { ExternalLink } from '../components/ExternalLink'
 import { InsightCard } from '../components/InsightCard'
 import { PassageChip } from '../components/PassageChip'
@@ -105,6 +106,8 @@ export function BookPage() {
         <InfoCard label="What is it about?" value={book.snapshot} accentClass={colors.borderSolid} />
       </div>
 
+      <ContextCard slug={book.slug} section={book.section} />
+
       <InsightCard slug={book.slug} section={book.section} />
 
       <CharactersList slug={book.slug} section={book.section} onOpen={setOpenRef} />
@@ -120,20 +123,6 @@ export function BookPage() {
       </div>
 
       <div className="flex flex-col gap-2">
-        <h2 className="font-heading text-lg font-semibold text-ink">Go deeper</h2>
-        <ul className="flex flex-col gap-2">
-          {videos.map((v) => (
-            <li key={v.url} className="rounded-card border border-ink/10 bg-white px-4 py-3">
-              <ExternalLink href={v.url}>Watch: {v.label} overview (BibleProject)</ExternalLink>
-            </li>
-          ))}
-          <li className="rounded-card border border-ink/10 bg-white px-4 py-3">
-            <ExternalLink href={enduringWordUrl(book, 1)}>Chapter-by-chapter commentary (Enduring Word)</ExternalLink>
-          </li>
-        </ul>
-      </div>
-
-      <div className="flex flex-col gap-2">
         <label htmlFor="my-notes" className="font-heading text-lg font-semibold text-ink">
           My notes
         </label>
@@ -146,6 +135,20 @@ export function BookPage() {
           className="w-full rounded-card border border-ink/15 bg-white p-3.5 text-[15px] text-ink placeholder:text-muted focus-visible:border-major-deep"
         />
         <p className="text-xs text-muted">Saved only on this device.</p>
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <h2 className="font-heading text-lg font-semibold text-ink">Go deeper</h2>
+        <ul className="flex flex-col gap-2">
+          {videos.map((v) => (
+            <li key={v.url} className="rounded-card border border-ink/10 bg-white px-4 py-3">
+              <ExternalLink href={v.url}>Watch: {v.label} overview (BibleProject)</ExternalLink>
+            </li>
+          ))}
+          <li className="rounded-card border border-ink/10 bg-white px-4 py-3">
+            <ExternalLink href={enduringWordUrl(book, 1)}>Chapter-by-chapter commentary (Enduring Word)</ExternalLink>
+          </li>
+        </ul>
       </div>
 
       <div className="mt-2 flex items-stretch justify-between gap-3 border-t border-ink/10 pt-4">
