@@ -2,6 +2,7 @@ import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { TabBar } from './components/TabBar'
+import { BackToTop } from './components/BackToTop'
 import { ScrollToTop } from './components/ScrollToTop'
 import { BooksPage } from './pages/BooksPage'
 import { BookPage } from './pages/BookPage'
@@ -23,6 +24,7 @@ function Layout() {
       </main>
       <Footer />
       <TabBar />
+      <BackToTop />
     </div>
   )
 }
