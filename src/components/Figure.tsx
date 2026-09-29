@@ -14,7 +14,7 @@ interface FigureProps {
  * Shows a cream placeholder with a small book icon when there is no image for this slug.
  */
 /** images.json's `file` may be a bare filename ("people/david.jpg") or already rooted ("/img/people/david.jpg"). */
-function imageSrc(file: string): string {
+export function imageSrc(file: string): string {
   if (/^https?:\/\//.test(file)) return file
   const trimmed = file.replace(/^\/+/, '')
   return trimmed.startsWith('img/') ? `/${trimmed}` : `/img/${trimmed}`
