@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { BOOKS, bookBySlug, sectionById } from '../data/books'
 import { bibleProjectVideos, enduringWordUrl, readBookUrl } from '../data/links'
-import { useNote, useReadBooks, useVersion } from '../lib/storage'
+import { useReadBooks, useVersion } from '../lib/storage'
 import { sectionColors } from '../lib/sectionColors'
 import { CharactersList } from '../components/CharactersList'
 import { ContextCard } from '../components/ContextCard'
@@ -29,20 +29,7 @@ export function BookPage() {
 
   const { isRead, toggleRead } = useReadBooks()
   const { version, setVersion } = useVersion()
-  const { note, setNote } = useNote(slug)
-  const [draft, setDraft] = useState(note)
   const [openRef, setOpenRef] = useState<string | null>(null)
-
-  useEffect(() => {
-    setDraft(note)
-  }, [note])
-
-  useEffect(() => {
-    const t = window.setTimeout(() => {
-      if (draft !== note) setNote(draft)
-    }, 500)
-    return () => window.clearTimeout(t)
-  }, [draft, note, setNote])
 
   useEffect(() => {
     document.title = book ? `${book.name} · Bible Notes` : 'Not found · Bible Notes'
@@ -122,21 +109,6 @@ export function BookPage() {
 
       <CharactersList slug={book.slug} section={book.section} onOpen={setOpenRef} />
 
-
-      <div className="flex flex-col gap-2">
-        <label htmlFor="my-notes" className="font-heading text-lg font-semibold text-ink">
-          My notes
-        </label>
-        <textarea
-          id="my-notes"
-          value={draft}
-          onChange={(e) => setDraft(e.target.value)}
-          rows={5}
-          placeholder="Jot down questions, insights, or things to bring to group…"
-          className="w-full rounded-card border border-ink/15 bg-white p-3.5 text-[15px] text-ink placeholder:text-muted focus-visible:border-major-deep"
-        />
-        <p className="text-xs text-muted">Saved only on this device.</p>
-      </div>
 
       <div className="flex flex-col gap-2">
         <h2 className="font-heading text-lg font-semibold text-ink">Go deeper</h2>

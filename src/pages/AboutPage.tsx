@@ -12,7 +12,7 @@ export function AboutPage() {
   }, [])
 
   function handleReset() {
-    const confirmed = window.confirm('Reset your read-progress and all saved notes on this device? This cannot be undone.')
+    const confirmed = window.confirm('Reset your read-progress on this device? This cannot be undone.')
     if (confirmed) {
       resetAllProgress()
       window.location.reload()
@@ -27,7 +27,7 @@ export function AboutPage() {
           This is our small group's printed "Pastel Bible Guide," moved online. It's the same table of all 66
           books — date, authorship, a study snapshot and key passages — plus the storyline and timeline from the
           back page, now searchable and easy to check on a phone. No login, no account, nothing shared: your
-          reading progress and notes stay on your own device.
+          reading progress stays on your own device.
         </p>
       </section>
 
@@ -87,14 +87,14 @@ export function AboutPage() {
       <InstallAppEntry />
 
       <section className="flex flex-col gap-2 rounded-card border border-history-deep/25 bg-history-soft/40 p-4">
-        <h2 className="font-heading text-lg font-semibold text-history-deep">Reset my progress and notes</h2>
-        <p className="text-sm text-ink">Clears which books you've marked as read and every note you've saved, on this device only.</p>
+        <h2 className="font-heading text-lg font-semibold text-history-deep">Reset my progress</h2>
+        <p className="text-sm text-ink">Clears which books you've marked as read, on this device only.</p>
         <button
           type="button"
           onClick={handleReset}
           className="mt-1 inline-flex min-h-[44px] w-fit items-center rounded-full border border-history-deep/40 bg-white px-4 text-sm font-semibold text-history-deep hover:bg-history-soft"
         >
-          Reset my progress and notes
+          Reset my progress
         </button>
       </section>
     </div>
