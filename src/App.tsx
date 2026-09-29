@@ -1,7 +1,6 @@
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
-import { TabBar } from './components/TabBar'
 import { BackToTop } from './components/BackToTop'
 import { ScrollToTop } from './components/ScrollToTop'
 import { BooksPage } from './pages/BooksPage'
@@ -19,11 +18,10 @@ function Layout() {
     <div className="flex min-h-screen flex-col">
       <ScrollToTop />
       <Header />
-      <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-6 pb-24 sm:px-6 sm:pb-6">
+      <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-6 sm:px-6">
         <Outlet />
       </main>
       <Footer />
-      <TabBar />
       <BackToTop />
     </div>
   )

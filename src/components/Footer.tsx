@@ -2,7 +2,7 @@ import { ExternalLink } from './ExternalLink'
 
 export function Footer() {
   return (
-    <footer className="mt-12 border-t border-ink/10 bg-cream pb-24 sm:pb-0">
+    <footer className="mt-12 border-t border-ink/10 bg-cream">
       <div className="mx-auto max-w-4xl px-4 py-6 text-sm text-muted sm:px-6">
         <p>
           Sources:{' '}

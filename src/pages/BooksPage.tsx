@@ -34,7 +34,7 @@ export function BooksPage() {
       <ProgressBar readCount={readBooks.length} total={BOOKS.length} />
       {readBooks.length > 0 && <QuickLinksRow />}
 
-      <div className="sticky top-0 z-10 sm:top-14 -mx-4 flex flex-col gap-3 bg-cream/95 px-4 pb-3 pt-2 sm:-mx-6 sm:px-6">
+      <div className="sticky top-12 z-10 sm:top-14 -mx-4 flex flex-col gap-3 bg-cream/95 px-4 pb-3 pt-2 sm:-mx-6 sm:px-6">
         <SearchBar value={query} onChange={setQuery} />
         <TestamentToggle value={testament} onChange={setTestament} />
       </div>
