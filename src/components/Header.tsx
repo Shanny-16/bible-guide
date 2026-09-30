@@ -1,15 +1,21 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { BookOpenIcon, SearchIcon } from './icons'
 import { SearchPanel } from './SearchPanel'
 
 const NAV_ITEMS = [
-  { to: '/', label: 'Books', end: true },
-  { to: '/people', label: 'People', end: false },
-  { to: '/places', label: 'Places', end: false },
-  { to: '/storyline', label: 'Storyline', end: false },
-  { to: '/about', label: 'About', end: false },
+  { to: '/', label: 'Books' },
+  { to: '/people', label: 'People' },
+  { to: '/places', label: 'Places' },
+  { to: '/storyline', label: 'Storyline' },
+  { to: '/about', label: 'About' },
 ] as const
+
+/** Books is active on the home list and on every /book/... page; the others also cover their detail routes. */
+function isNavActive(to: string, pathname: string): boolean {
+  if (to === '/') return pathname === '/' || pathname.startsWith('/book/')
+  return pathname === to || pathname.startsWith(`${to}/`)
+}
 
 export function Header() {
   const { pathname } = useLocation()
@@ -85,20 +91,21 @@ export function Header() {
           }`}
         >
           <nav aria-label="Main" className="-ml-2 flex min-w-0 flex-1 flex-nowrap gap-0 overflow-x-auto scrollbar-none sm:-ml-1 sm:flex-none sm:gap-1">
-            {NAV_ITEMS.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                end={item.end}
-                className={({ isActive }) =>
-                  `flex min-h-[44px] shrink-0 items-center rounded-full px-2 text-sm font-semibold sm:px-3.5 transition-colors ${
+            {NAV_ITEMS.map((item) => {
+              const isActive = isNavActive(item.to, pathname)
+              return (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  aria-current={isActive ? 'page' : undefined}
+                  className={`flex min-h-[44px] shrink-0 items-center rounded-full px-2 text-sm font-semibold sm:px-3.5 transition-colors ${
                     isActive ? 'bg-gospels-soft text-gospels-deep' : 'text-muted hover:bg-ink/5 hover:text-ink'
-                  }`
-                }
-              >
-                {item.label}
-              </NavLink>
-            ))}
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              )
+            })}
           </nav>
           <button
             type="button"

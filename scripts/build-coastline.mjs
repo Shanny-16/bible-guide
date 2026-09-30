@@ -15,7 +15,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '..')
 const OUT_FILE = path.join(ROOT, 'src/data/coastline.json')
 
-const UA = 'BibleNotesCoastlineBuilder/1.0 (biblenotes.live; contact sharon.unik@gmail.com)'
+const UA = 'BibleNotesCoastlineBuilder/1.0 (https://biblenotes.live)'
 const URL_50M = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_land.geojson'
 const URL_110M = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_land.geojson'
 

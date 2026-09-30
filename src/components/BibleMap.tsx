@@ -119,7 +119,7 @@ function PlaceDot({ slug, name, lon, lat, project, interactive, onNavigate }: Do
   const circle = (
     <>
       <circle cx={x} cy={y} r={4} fill="var(--color-major-deep)" stroke="#fff" strokeWidth={1.5} />
-      {interactive && <circle cx={x} cy={y} r={12} fill="transparent" />}
+      {interactive && <circle cx={x} cy={y} r={22} fill="transparent" />}
     </>
   )
 
@@ -230,7 +230,7 @@ export function BibleMap({ highlight, interactive, className }: BibleMapProps) {
       <div className="overflow-hidden rounded-card border border-ink/10 bg-white shadow-sm">
         <svg
           viewBox={`0 0 ${VIEW_W} ${VIEW_H}`}
-          role="img"
+          role={interactive ? 'group' : 'img'}
           aria-label="Map of Bible lands"
           className="block h-auto w-full"
         >

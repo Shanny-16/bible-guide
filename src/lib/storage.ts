@@ -26,7 +26,13 @@ function notifyChange(): void {
   }
 }
 
+// In-memory fallback for keys whose last write/remove could not be persisted (storage blocked or full),
+// so mark-as-read, the chosen Bible version and so on still work for the rest of the session.
+// A null value means "removed".
+const memoryFallback = new Map<string, string | null>()
+
 function safeGet(key: string): string | null {
+  if (memoryFallback.has(key)) return memoryFallback.get(key) ?? null
   try {
     return localStorage.getItem(key)
   } catch {
@@ -37,16 +43,19 @@ function safeGet(key: string): string | null {
 function safeSet(key: string, value: string): void {
   try {
     localStorage.setItem(key, value)
+    memoryFallback.delete(key)
   } catch {
-    // storage full or unavailable: fail silently, app still works
+    // storage full or unavailable: keep the value in memory for this session
+    memoryFallback.set(key, value)
   }
 }
 
 function safeRemove(key: string): void {
   try {
     localStorage.removeItem(key)
+    memoryFallback.delete(key)
   } catch {
-    // no-op
+    memoryFallback.set(key, null)
   }
 }
 
@@ -213,5 +222,8 @@ export function resetAllProgress(): void {
   } catch {
     // no-op
   }
+  Array.from(memoryFallback.keys())
+    .filter((k) => k.startsWith(NOTE_PREFIX))
+    .forEach(safeRemove)
   notifyChange()
 }

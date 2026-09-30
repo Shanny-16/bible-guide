@@ -2,8 +2,9 @@ import { useEffect, useRef, useState } from 'react'
 import type { VersionCode } from '../data/links'
 import { passageUrl } from '../data/links'
 import type { PassageText, TextTranslation, Verse } from '../lib/bibleText'
-import { TEXT_TRANSLATIONS, loadPassage, spansChapters } from '../lib/bibleText'
+import { PassageError, TEXT_TRANSLATIONS, loadPassage, spansChapters } from '../lib/bibleText'
 import { useTextTranslation } from '../lib/storage'
+import { useModalLayer } from '../lib/useModalLayer'
 import { CloseIcon } from './icons'
 import { ExternalLink } from './ExternalLink'
 
@@ -17,7 +18,7 @@ interface PassageSheetProps {
 
 type LoadState =
   | { status: 'loading' }
-  | { status: 'error' }
+  | { status: 'error'; busy: boolean }
   | { status: 'success'; data: PassageText }
 
 function TranslationToggle({ value, onChange }: { value: TextTranslation; onChange: (v: TextTranslation) => void }) {
@@ -29,7 +30,7 @@ function TranslationToggle({ value, onChange }: { value: TextTranslation; onChan
           type="button"
           onClick={() => onChange(t.code)}
           aria-pressed={value === t.code}
-          className={`min-h-[30px] rounded-full px-3 text-xs font-bold transition-colors ${
+          className={`min-h-[40px] rounded-full px-3 text-xs font-bold transition-colors ${
             value === t.code ? 'bg-ink text-cream' : 'text-muted hover:text-ink'
           }`}
         >
@@ -78,29 +79,25 @@ export function PassageSheet({ reference, onClose, version }: PassageSheetProps)
   const [state, setState] = useState<LoadState>({ status: 'loading' })
   const [visible, setVisible] = useState(false)
   const closeButtonRef = useRef<HTMLButtonElement>(null)
+  const dialogRef = useRef<HTMLDivElement>(null)
+  const [attempt, setAttempt] = useState(0)
   const lastActiveRef = useRef<HTMLElement | null>(null)
   const titleId = 'passage-sheet-title'
 
-  // Focus management, Escape-to-close, and body scroll lock while the sheet is open.
+  // Scroll lock, Escape (top-most dialog only) and Tab focus trap.
+  useModalLayer(isOpen, dialogRef, onClose)
+
+  // Focus management while the sheet is open.
   useEffect(() => {
     if (!isOpen) return
 
     lastActiveRef.current = document.activeElement as HTMLElement | null
     const raf = requestAnimationFrame(() => setVisible(true))
     const focusTimer = window.setTimeout(() => closeButtonRef.current?.focus(), 20)
-    const prevOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
-
-    function handleKey(e: KeyboardEvent) {
-      if (e.key === 'Escape') onClose()
-    }
-    document.addEventListener('keydown', handleKey)
 
     return () => {
       cancelAnimationFrame(raf)
       window.clearTimeout(focusTimer)
-      document.body.style.overflow = prevOverflow
-      document.removeEventListener('keydown', handleKey)
       setVisible(false)
       lastActiveRef.current?.focus()
       lastActiveRef.current = null
@@ -115,11 +112,13 @@ export function PassageSheet({ reference, onClose, version }: PassageSheetProps)
     setState({ status: 'loading' })
     loadPassage(reference, translation, controller.signal)
       .then((data) => setState({ status: 'success', data }))
-      .catch(() => {
-        if (!controller.signal.aborted) setState({ status: 'error' })
+      .catch((err: unknown) => {
+        if (!controller.signal.aborted) {
+          setState({ status: 'error', busy: err instanceof PassageError && err.code === 'rate_limited' })
+        }
       })
     return () => controller.abort()
-  }, [reference, translation])
+  }, [reference, translation, attempt])
 
   if (reference === null) return null
 
@@ -129,6 +128,8 @@ export function PassageSheet({ reference, onClose, version }: PassageSheetProps)
     <div className="fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4">
       <div className="absolute inset-0 bg-ink/40" onClick={onClose} aria-hidden="true" />
       <div
+        ref={dialogRef}
+        tabIndex={-1}
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
@@ -156,7 +157,10 @@ export function PassageSheet({ reference, onClose, version }: PassageSheetProps)
           </button>
         </div>
 
-        <div className="flex-1 overflow-y-auto px-4 py-4 sm:px-5">
+        <div
+          className="flex-1 overflow-y-auto px-4 py-4 sm:px-5"
+          style={state.status === 'success' ? undefined : { paddingBottom: 'calc(1rem + env(safe-area-inset-bottom))' }}
+        >
           {state.status === 'loading' && (
             <div className="flex flex-col items-center justify-center gap-3 py-10 text-center" aria-live="polite">
               <div className="flex gap-1.5">
@@ -170,7 +174,18 @@ export function PassageSheet({ reference, onClose, version }: PassageSheetProps)
 
           {state.status === 'error' && (
             <div className="flex flex-col items-center gap-3 py-8 text-center">
-              <p className="text-[15px] text-ink">Couldn't load this passage right now.</p>
+              <p role="alert" className="text-[15px] text-ink">
+                {state.busy
+                  ? 'The verse service is busy. Please try again in a few seconds.'
+                  : "Couldn't load this passage right now."}
+              </p>
+              <button
+                type="button"
+                onClick={() => setAttempt((n) => n + 1)}
+                className="inline-flex min-h-[44px] items-center rounded-full bg-ink px-5 text-sm font-semibold text-cream"
+              >
+                Try again
+              </button>
               <ExternalLink
                 href={passageUrl(reference, version)}
                 underline={false}
@@ -181,11 +196,23 @@ export function PassageSheet({ reference, onClose, version }: PassageSheetProps)
             </div>
           )}
 
-          {state.status === 'success' && <VerseBody data={state.data} reference={reference} />}
+          {state.status === 'success' && (
+            <>
+              <VerseBody data={state.data} reference={reference} />
+              {state.data.truncated && (
+                <p className="mt-3 text-xs text-muted">
+                  Showing the first 6 chapters. Use the Bible Gateway link for the rest.
+                </p>
+              )}
+            </>
+          )}
         </div>
 
         {state.status === 'success' && (
-          <div className="flex flex-col gap-2 border-t border-ink/10 bg-white px-4 py-3 sm:px-5">
+          <div
+            className="flex flex-col gap-2 border-t border-ink/10 bg-white px-4 pt-3 sm:px-5"
+            style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}
+          >
             <p className="text-xs text-muted">Text: {state.data.translationName || translationLabel} (public domain).</p>
             <ExternalLink
               href={passageUrl(reference, version)}

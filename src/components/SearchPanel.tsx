@@ -5,6 +5,7 @@ import { findMatchRange, globalSearch } from '../lib/globalSearch'
 import type { SearchHit } from '../lib/globalSearch'
 import { getImage } from '../lib/images'
 import { sectionColors } from '../lib/sectionColors'
+import { useModalLayer } from '../lib/useModalLayer'
 import { imageSrc } from './Figure'
 import { BookOpenIcon, CloseIcon, SearchIcon } from './icons'
 
@@ -94,6 +95,7 @@ export function SearchPanel({ open, onClose, getTop, returnFocusRef }: SearchPan
   const [visible, setVisible] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
   const listRef = useRef<HTMLDivElement>(null)
+  const dialogRef = useRef<HTMLDivElement>(null)
   const navigate = useNavigate()
 
   const results = useMemo(() => globalSearch(query), [query])
@@ -118,28 +120,17 @@ export function SearchPanel({ open, onClose, getTop, returnFocusRef }: SearchPan
     if (!open) setQuery('')
   }, [open])
 
-  // Body scroll lock, open animation, Escape, and returning focus to the magnifier on close.
+  // Scroll lock, Escape (top-most dialog only) and Tab focus trap.
+  useModalLayer(open, dialogRef, onClose)
+
+  // Open animation, and returning focus to the magnifier on close.
   useEffect(() => {
     if (!open) return
     const raf = requestAnimationFrame(() => setVisible(true))
-    const body = document.body
-    const prevOverflow = body.style.overflow
-    const prevPadding = body.style.paddingRight
-    const scrollbar = window.innerWidth - document.documentElement.clientWidth
-    body.style.overflow = 'hidden'
-    if (scrollbar > 0) body.style.paddingRight = `${scrollbar}px`
-
-    const onKey = (e: globalThis.KeyboardEvent) => {
-      if (e.key === 'Escape') onClose()
-    }
-    document.addEventListener('keydown', onKey)
     const returnTo = returnFocusRef.current
 
     return () => {
       cancelAnimationFrame(raf)
-      body.style.overflow = prevOverflow
-      body.style.paddingRight = prevPadding
-      document.removeEventListener('keydown', onKey)
       setVisible(false)
       returnTo?.focus({ preventScroll: true })
     }
@@ -181,6 +172,8 @@ export function SearchPanel({ open, onClose, getTop, returnFocusRef }: SearchPan
         aria-hidden="true"
       />
       <div
+        ref={dialogRef}
+        tabIndex={-1}
         role="dialog"
         aria-modal="true"
         aria-label="Search"

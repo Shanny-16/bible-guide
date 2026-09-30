@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
@@ -57,6 +58,9 @@ export default defineConfig({
                 maxEntries: 10,
                 maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
               },
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
             },
           },
           {
@@ -80,6 +84,15 @@ export default defineConfig({
               cacheName: 'pictures',
               expiration: { maxEntries: 120, maxAgeSeconds: 60 * 60 * 24 * 60 },
               cacheableResponse: { statuses: [0, 200] },
+              plugins: [
+                {
+                  // Only keep real pictures: never cache an error page or a non-image response.
+                  cacheWillUpdate: async ({ response }) =>
+                    response.status === 200 && (response.headers.get('content-type') ?? '').startsWith('image/')
+                      ? response
+                      : null,
+                },
+              ],
             },
           },
           {
@@ -100,4 +113,14 @@ export default defineConfig({
       },
     }),
   ],
+  // `vite preview` serves the same security headers as production (vercel.json),
+  // so the Content-Security-Policy can be tested locally before deploying.
+  preview: { headers: productionHeaders() },
 })
+
+function productionHeaders(): Record<string, string> {
+  const config = JSON.parse(readFileSync(new URL('./vercel.json', import.meta.url), 'utf8')) as {
+    headers?: Array<{ headers: Array<{ key: string; value: string }> }>
+  }
+  return Object.fromEntries((config.headers?.[0]?.headers ?? []).map((h) => [h.key, h.value]))
+}

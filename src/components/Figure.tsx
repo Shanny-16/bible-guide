@@ -30,7 +30,7 @@ export function Figure({ slug, variant = 'card', className }: FigureProps) {
         {image ? (
           <img
             src={imageSrc(image.file)}
-            alt={image.title}
+            alt={variant === 'detail' ? image.title : ''}
             loading="lazy"
             className="h-full w-full object-cover"
           />
@@ -41,10 +41,10 @@ export function Figure({ slug, variant = 'card', className }: FigureProps) {
         )}
       </div>
       {variant === 'detail' && image && (
-        <p className="mt-1.5 truncate text-xs text-muted">
+        <p className="mt-1.5 break-words text-xs text-muted">
           Image:{' '}
           <a href={image.source} target="_blank" rel="noopener" className="underline decoration-1 underline-offset-2 hover:decoration-2">
-            {image.title} · {image.author} · {image.license}
+            {[image.title, image.author, image.license].filter(Boolean).join(' · ')}
           </a>
         </p>
       )}

@@ -25,7 +25,7 @@ function InfoCard({ label, value, accentClass }: { label: string; value: string;
 
 export function BookPage() {
   const { slug = '' } = useParams()
-  const book = bookBySlug(slug)
+  const book = bookBySlug(slug.toLowerCase())
 
   const { isRead, toggleRead } = useReadBooks()
   const { version, setVersion } = useVersion()

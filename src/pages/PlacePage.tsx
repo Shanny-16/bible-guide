@@ -13,7 +13,7 @@ import { NotFoundPage } from './NotFoundPage'
 
 export function PlacePage() {
   const { slug = '' } = useParams()
-  const place = placeBySlug(slug)
+  const place = placeBySlug(slug.toLowerCase())
   const { version } = useVersion()
   const [openRef, setOpenRef] = useState<string | null>(null)
 

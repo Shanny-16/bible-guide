@@ -99,9 +99,10 @@ export function bibleProjectVideos(book: Book): Array<{ label: string; url: stri
   }))
 }
 
-/** Enduring Word (David Guzik) chapter commentary. Song of Songs is filed as "song-of-solomon" there. */
+/** Enduring Word (David Guzik) chapter commentary. Song of Songs is "song-of-solomon" there and Psalms is "psalm". */
 export function enduringWordUrl(book: Book, chapter = 1): string {
-  const slug = book.slug === 'song-of-songs' ? 'song-of-solomon' : book.slug
+  const renamed: Record<string, string> = { 'song-of-songs': 'song-of-solomon', psalms: 'psalm' }
+  const slug = renamed[book.slug] ?? book.slug
   return `https://enduringword.com/bible-commentary/${slug}-${chapter}/`
 }
 

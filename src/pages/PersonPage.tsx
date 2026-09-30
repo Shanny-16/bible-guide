@@ -12,7 +12,7 @@ import { NotFoundPage } from './NotFoundPage'
 
 export function PersonPage() {
   const { slug = '' } = useParams()
-  const person = peopleBySlug(slug)
+  const person = peopleBySlug(slug.toLowerCase())
   const { version } = useVersion()
   const [openRef, setOpenRef] = useState<string | null>(null)
 

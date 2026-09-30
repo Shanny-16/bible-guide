@@ -15,7 +15,7 @@ import { fileURLToPath } from 'node:url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '..')
 
-const UA = 'BibleNotesImageFetcher/1.0 (biblenotes.live; contact sharon.unik@gmail.com)'
+const UA = 'BibleNotesImageFetcher/1.0 (https://biblenotes.live)'
 const API = 'https://commons.wikimedia.org/w/api.php'
 const SLEEP_MS = 500
 

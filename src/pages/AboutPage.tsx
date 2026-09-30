@@ -26,8 +26,9 @@ export function AboutPage() {
         <p className="text-[15px] text-ink">
           This is our small group's printed "Pastel Bible Guide," moved online. It's the same table of all 66
           books — date, authorship, a study snapshot and key passages — plus the storyline and timeline from the
-          back page, now searchable and easy to check on a phone. No login, no account, nothing shared: your
-          reading progress stays on your own device.
+          back page, now searchable and easy to check on a phone. No login and no account. Your reading progress is
+          saved only on your device. When you open a verse, the reference is sent to bible-api.com to fetch the
+          text, and the fonts load from Google Fonts.
         </p>
       </section>
 

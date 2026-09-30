@@ -4,3 +4,4 @@ dist
 .DS_Store
 *.local
 scratch/
+public/img/contact-sheet.html

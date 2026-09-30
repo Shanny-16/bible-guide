@@ -1,5 +1,6 @@
-import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Outlet, Route, Routes, useParams } from 'react-router-dom'
 import { Header } from './components/Header'
+import { ErrorBoundary } from './components/ErrorBoundary'
 import { Footer } from './components/Footer'
 import { BackToTop } from './components/BackToTop'
 import { ScrollToTop } from './components/ScrollToTop'
@@ -12,6 +13,21 @@ import { PlacePage } from './pages/PlacePage'
 import { StorylinePage } from './pages/StorylinePage'
 import { AboutPage } from './pages/AboutPage'
 import { NotFoundPage } from './pages/NotFoundPage'
+
+// Keyed by slug so that moving between detail pages (e.g. via a related-person link) starts fresh:
+// an open passage sheet never survives a route change.
+function BookRoute() {
+  const { slug } = useParams()
+  return <BookPage key={slug} />
+}
+function PersonRoute() {
+  const { slug } = useParams()
+  return <PersonPage key={slug} />
+}
+function PlaceRoute() {
+  const { slug } = useParams()
+  return <PlacePage key={slug} />
+}
 
 function Layout() {
   return (
@@ -30,19 +46,21 @@ function Layout() {
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route index element={<BooksPage />} />
-          <Route path="book/:slug" element={<BookPage />} />
-          <Route path="people" element={<PeoplePage />} />
-          <Route path="people/:slug" element={<PersonPage />} />
-          <Route path="places" element={<PlacesPage />} />
-          <Route path="places/:slug" element={<PlacePage />} />
-          <Route path="storyline" element={<StorylinePage />} />
-          <Route path="about" element={<AboutPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Route>
-      </Routes>
+      <ErrorBoundary>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route index element={<BooksPage />} />
+            <Route path="book/:slug" element={<BookRoute />} />
+            <Route path="people" element={<PeoplePage />} />
+            <Route path="people/:slug" element={<PersonRoute />} />
+            <Route path="places" element={<PlacesPage />} />
+            <Route path="places/:slug" element={<PlaceRoute />} />
+            <Route path="storyline" element={<StorylinePage />} />
+            <Route path="about" element={<AboutPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Route>
+        </Routes>
+      </ErrorBoundary>
     </BrowserRouter>
   )
 }
