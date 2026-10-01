@@ -23,7 +23,7 @@ export function PeoplePage() {
 
       <div className="flex flex-col gap-8">
         {erasWithPeople.map(({ era, people }) => (
-          <section key={era.id} id={`era-${era.id}`} className="scroll-mt-28">
+          <section key={era.id} id={`era-${era.id}`} className="scroll-mt-16">
             <div className="rounded-card border border-wisdom-deep/20 bg-wisdom-soft px-4 py-3">
               <h2 className="font-heading text-lg font-semibold text-wisdom-deep">{era.name}</h2>
               <p className="text-sm text-wisdom-deep/80">{era.dates}</p>

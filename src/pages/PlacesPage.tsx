@@ -29,7 +29,7 @@ export function PlacesPage() {
 
       <div className="flex flex-col gap-8">
         {erasWithPlaces.map(({ era, places }) => (
-          <section key={era.id} id={`era-${era.id}`} className="scroll-mt-28">
+          <section key={era.id} id={`era-${era.id}`} className="scroll-mt-16">
             <div className="rounded-card border border-major-deep/20 bg-major-soft px-4 py-3">
               <h2 className="font-heading text-lg font-semibold text-major-deep">{era.name}</h2>
               <p className="text-sm text-major-deep/80">{era.dates}</p>
